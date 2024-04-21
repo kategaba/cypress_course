@@ -1,0 +1,27 @@
+{
+  "name": "cypress_course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --config-file cypress.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.7.3",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.3",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "lodash": "^4.17.21",
+    "snowflake-sdk": "^1.10.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step-definitions/**/*.js",
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "nonGlobalStepDefinitions": true
+  }
+}
